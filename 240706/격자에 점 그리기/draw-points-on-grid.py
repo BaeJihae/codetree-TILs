@@ -1,0 +1,15 @@
+n, m = map(int, input().split())
+
+num = 0
+
+arr = [[0 for _ in range(n)] for _ in range(n)]
+
+for _ in range(m):
+    num += 1
+    i, j = tuple(map(int, input().split()))
+    arr[i-1][j-1] = num
+
+for a in arr:
+    for i in a:
+        print(i, end = " ")
+    print()
